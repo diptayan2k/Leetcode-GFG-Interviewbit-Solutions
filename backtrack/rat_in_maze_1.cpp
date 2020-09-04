@@ -1,5 +1,7 @@
-// The rat can only move in Right and Down 
-// Print all possible paths to reach (n-1,n-1) fron (0,0)
+// The rat can only move in Right and Down directions
+// m[i][j] = 0 means the rat can't traverse these cells
+// m[i][j] = 1 measn the rat can traverse these cells
+// Print all possible paths to reach (n-1,n-1) from (0,0)
 
 #include <iostream>
 #include<bits/stdc++.h>
