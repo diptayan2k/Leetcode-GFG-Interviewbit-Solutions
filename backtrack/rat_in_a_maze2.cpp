@@ -58,10 +58,10 @@ void rat_in_maze(int i, int j, vector<char>& path, vector<string>& ans, int m[MA
 		rat_in_maze(i + 1, j, path, ans, m, n, vis);
 		path.pop_back();
 	}
-	if (i > 0 and m[i - 1][j] == 1)
+	if (j > 0 and m[i][j - 1] == 1)
 	{
-		path.push_back('U');
-		rat_in_maze(i - 1, j, path, ans, m, n, vis);
+		path.push_back('L');
+		rat_in_maze(i, j - 1, path, ans, m, n, vis);
 		path.pop_back();
 	}
 	if (j < n - 1 and m[i][j + 1] == 1)
@@ -70,18 +70,18 @@ void rat_in_maze(int i, int j, vector<char>& path, vector<string>& ans, int m[MA
 		rat_in_maze(i, j + 1, path, ans, m, n, vis);
 		path.pop_back();
 	}
-	if (j > 0 and m[i][j - 1] == 1)
+	if (i > 0 and m[i - 1][j] == 1)
 	{
-		path.push_back('L');
-		rat_in_maze(i, j - 1, path, ans, m, n, vis);
+		path.push_back('U');
+		rat_in_maze(i - 1, j, path, ans, m, n, vis);
 		path.pop_back();
 	}
+
 
 	vis[i][j] = false;
 
 
 }
-
 
 void solve(int t)
 {
@@ -107,7 +107,7 @@ void solve(int t)
 	if (m[0][0] == 1)
 		rat_in_maze(0, 0, path, ans, m, n, vis);
 
-	sort(ans.begin(), ans.end());
+	
 	if (ans.empty())
 	{
 		cout << -1 << endl;
