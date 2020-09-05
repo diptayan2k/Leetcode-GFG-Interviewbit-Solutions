@@ -1,27 +1,23 @@
 /*
-Given a set of distinct integers, S, return all possible subsets.
+Given a collection of integers that might contain duplicates, S, return all possible subsets.
 
  Note:
 Elements in a subset must be in non-descending order.
 The solution set must not contain duplicate subsets.
-Also, the subsets should be sorted in ascending ( lexicographic ) order.
-The list is not necessarily sorted.
+The subsets must be sorted lexicographically.
 Example :
-
-If S = [1,2,3], a solution is:
+If S = [1,2,2], the solution is:
 
 [
-  [],
-  [1],
-  [1, 2],
-  [1, 2, 3],
-  [1, 3],
-  [2],
-  [2, 3],
-  [3],
+[],
+[1],
+[1,2],
+[1,2,2],
+[2],
+[2, 2]
 ]
 
-Link : https://www.interviewbit.com/problems/subset/
+Link : https://www.interviewbit.com/problems/subsets-ii/
 */
 
 
